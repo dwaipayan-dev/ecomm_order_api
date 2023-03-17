@@ -19,7 +19,6 @@ class OrderService {
     }
     const item: Item = new Item();
     item.product = product;
-    console.log(order.items);
     order.items = [...order.items, item];
     try {
       await orderRepository.getOrderRepository().save(order);

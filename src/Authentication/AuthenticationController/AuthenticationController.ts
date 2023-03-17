@@ -83,6 +83,7 @@ class AuthenticationController {
     const token = jwtService.createJwt(user.id, user.name);
     res.status(200).send({
       token,
+      user: user.name,
     });
   }
 }
