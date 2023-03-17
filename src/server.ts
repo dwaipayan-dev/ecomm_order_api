@@ -6,7 +6,7 @@ import "reflect-metadata";
 const port = 8080;
 const app = init();
 
-app.get("/hello", (req, res) => {
+app.get("/hello", async (req, res) => {
   res.send("hello");
 });
 app.listen(port, () => {
